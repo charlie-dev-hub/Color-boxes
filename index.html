@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="js/react.development.js"></script>
+    <script crossorigin src="js/react-dom.development.js"></script>
+    <script src="js/babel.min.js"></script>
+    <link rel="stylesheet" href="css\index.css">
+    <title>Color Boxes</title>
+</head>
+<body>
+   <div id="main"></div>
+
+   <script type="text/jsx">
+       const data =[
+       { id:1, bgcolor: {backgroundColor: "#1abc9c"}, text:"TURQUOISE"},
+       { id:2, bgcolor: {backgroundColor: "#2ecc71"}, text:"EMERALD"},
+       { id:3, bgcolor: {backgroundColor: "#3498db"}, text:"PETER REIVER"},
+       { id:4, bgcolor: {backgroundColor: "#9b59b6"}, text:"AMETHYST"},
+       { id:5, bgcolor: {backgroundColor: "#34495e"}, text:"WET ASPHALT"},
+       { id:6, bgcolor: {backgroundColor: "#16a085"}, text:"GREEN SEA"},
+       { id:7, bgcolor: {backgroundColor: "#27ae60"}, text:"NEPHRITIS"},
+       { id:8, bgcolor: {backgroundColor: "#2980b9"}, text:"BELIZE HOLE"},
+       { id:9, bgcolor: {backgroundColor: "#8e44ad"}, text:"WISTERIA"},
+       { id:10, bgcolor: {backgroundColor: "#2c3e50"}, text:"MIDNIGHT BLUE"},
+       { id:11, bgcolor: {backgroundColor: "#f1c40f"}, text:"SUN FLOWER"},
+       { id:12, bgcolor: {backgroundColor: "#e67e22"}, text:"CARROT"},
+       { id:13, bgcolor: {backgroundColor: "#e74c3c"}, text:"ALIZARIN"},
+       { id:14, bgcolor: {backgroundColor: "#ecf0f1"}, text:"CLOUDS"},
+       { id:15, bgcolor: {backgroundColor: "#95a5a6"}, text:"CONCRETE"},
+       { id:16, bgcolor: {backgroundColor: "#f39c12"}, text:"ORANGE"},
+       { id:17, bgcolor: {backgroundColor: "#d35400"}, text:"PUMPKIN"},
+       { id:18, bgcolor: {backgroundColor: "#c0392b"}, text:"POMGRANATE"},
+       { id:19, bgcolor: {backgroundColor: "#bdc3c7"}, text:"SILVER"},
+       { id:20, bgcolor: {backgroundColor: "#7f8c8d"}, text:"ASBESTOS"},    
+       ];
+    
+    function Color(props){
+        return (
+            <div className ="colorbox" style={props.bgcolor}>
+                <div className="Copy">
+                    <a href="">Copy</a>
+
+                </div>
+                <p className="just_text">{props.text}</p>
+            </div>
+        );
+    }
+
+    let colorList = data.map(item => <Color key={item.id} bgcolor={item.bgcolor} text={item.text} />);
+    ReactDOM.render(
+        <React.StrictMode>
+            {colorList}
+        </React.StrictMode>, document.getElementById('main'));
+
+   </script>
+</body>
+</html>

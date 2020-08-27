@@ -1,0 +1,26 @@
+.colorbox{
+    width: 20%;
+    height: 25vh;
+    float: left;
+}
+.just_text{
+    text-align: right;
+    padding-top: 30px;
+    color: white;
+    /* position: absolute; */
+    margin: 0px;
+    /* right: 0px; */
+}
+.Copy{
+    position: relative;
+    left: 40%;
+    padding-top: 25%;
+    /* width: 10px; */
+}
+
+.Copy > a{
+    text-decoration: none;
+    border: 1px solid;
+    color: white;
+    border-radius: 5px;
+}
